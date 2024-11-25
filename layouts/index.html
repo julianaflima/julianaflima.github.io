@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+                {{ partial "head.html" . }}
+    </head>
+    <body>
+        <div>
+            {{ if .Site.Params.Nav.enable }}
+            {{ partial "nav.html" . }}
+            {{ end }}
+
+            <div class="three_sections">
+
+            {{ if .Site.Params.Hero.enable }}
+            {{ partial "hero.html" . }}
+            {{ end }}
+
+            {{ if .Site.Params.research.enable }}
+            {{ partial "research.html" . }}
+            {{ end }}
+
+            {{ if .Site.Params.teaching.enable }}
+            {{ partial "teaching.html" . }}
+            {{ end }}
+
+            </div>
+            
+            {{ if .Site.Params.footer.enable }}
+            {{ partial "footer.html" . }}
+            {{ end }}
+
+        </div>
+
+        {{ partial "scripts.html" . }}
+
+    </body>
+</html>

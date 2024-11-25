@@ -1,0 +1,53 @@
+
+<section data-scroll-index="1">
+	<div class="process">
+
+    <div class="header">
+      <h1 class="title">{{ .Site.Params.Research.Title }}</h1>
+      <h2 class="subtitle">{{ .Site.Params.Research.Subtitle }}</h2>
+		</div>
+
+	  <div class="process-wrapper-ppp">
+      {{ range $element := sort .Site.Data.research.published "weight" "desc" }}
+        {{ if not .draft }}
+          <div class="process-item">
+            <figure class="item-header">
+                <img src="svg/{{ $element.icon }}">
+                <h3><a href="{{$element.link}}" target="blank">{{ $element.title }}</a></h3>
+            </figure>
+            <p>{{ $element.description | markdownify }}</p>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <div class="process-wrapper-ppp">
+      {{ range $element := sort .Site.Data.research.progress "weight" }}
+        {{ if not .draft }}
+		      <div class="process-item">
+		        <figure class="item-header">
+		            <img src="svg/{{ $element.icon }}">
+		            <h3><a href="{{$element.link}}" target="blank">{{ $element.title }}</a></h3>
+		        </figure>
+		        <p>{{ $element.description | markdownify }}</p>
+		      </div>
+		    {{ end }}
+      {{ end }}
+    </div>
+
+    <div class="process-wrapper-presentation">
+      {{ range $element := sort .Site.Data.research.presentation "weight" "desc" }}
+        {{ if not .draft }}
+	        <div class="process-item">
+            <figure class="item-header">
+                <img src="svg/{{ $element.icon }}">
+                <h3><a href="{{$element.link}}" target="blank">{{ $element.title }}</a></h3>
+            </figure>
+            <p>{{ $element.description | markdownify }}</p>
+	        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  
+  </div>
+</section>

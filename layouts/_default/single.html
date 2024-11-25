@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        {{ partial "head_teaching_item.html" . }}
+    </head>
+    <body>
+        {{ partial "nav_teaching_item.html" . }}
+        {{ partial "main_teaching_item.html" . }}
+        <section class="case-study-page">
+            <div class="content-case-study">
+                {{ .Content }}
+            </div>
+        </section>
+        {{ partial "footer_teaching_item.html" . }}
+        {{ partial "scripts.html" . }}
+    </body>
+</html>

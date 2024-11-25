@@ -1,0 +1,42 @@
+baseURL = 'https://julianaflima.github.io/'
+languageCode = 'en-us'
+title = 'Juliana Lima'
+
+[markup.goldmark.renderer]
+    unsafe= true
+
+[params]
+	description = "I am an Assistant Professor at Azim Premji University. My main research interests are in philosophy of mind and language. In my work I explore questions about indexicality in languange and mind, (_de se_), the content of beliefs in general, and its relation to language."
+    description_photo = "favicon.ico"
+    favicon = "favicon.ico"
+    logo = "favicon.ico"
+    email = "jfacciolima@gmail.com"
+    facebook = "faccioju"
+    lattes = "http://lattes.cnpq.br/4495384436274245"
+
+
+[params.nav]
+	enable = true
+
+[params.hero]
+    enable = true
+    avatar = "profile_pic.jpg"
+    subtitle = "Juliana Lima"
+    subsubtitle = "Assistant Professor"
+    subsubsubtitle = "Azim Premji University"
+    hero_right = ["My main research interests are in philosophy of mind and language. In my work, I explore questions about indexicality in languange and mind, (_de se_), the content of beliefs in general, and its relation to language. Since 2019, I have been working on a research project on group indexical beliefs, where I consider how first-person plural thoughts and joint demonstrative beliefs can be accommodated within (_de se_) and (_IEM_) accounts of indexicals, if possible at all.", "When I'm not doing philosophy, I'm traveling, knitting, crocheting or embroidering, learning how to code, or perusing Reddit (purely for pedagogical purposes -- I am designing an Intro course where philosophical theories are introduced with content I find on Reddit)."]
+    resume = "CVLima.pdf"
+
+[params.research]
+	enable = true
+	title = "Research"
+	subtitle = "Selected Published Work, Papers in Progress, and Presentations"
+
+[params.teaching]
+	enable = true
+	title = "Teaching"
+	subtitle = "Past Syllabi, handouts, and sample syllabi"
+  text = ["My classes are designed to be inclusive. My experience teaching in different countries with different cultural backgrounds (Brazil, United States, and India) and as a ESL student in the US gave me a privileged perspective on impacts that differences in cultural, social, and economic backgrounds can have in students outcomes and how to overcome them.",  "Aside from teaching the relevant material, I design my courses to get students to acquire transferable skills, like basic research abilities, written and presentation skills, as well as ability to work in group.", "In my lectures, I take a student-centered approach to teaching, where students have an active role. My most successful strategy to promote student participation and facilitate understanding of the material is, by far, the handouts I devised to structure my lectures over the course of seven years teaching in higher-education.  They encourage students to summarize what is discussed in class and take on an active-listening role. As a result, students engage with the material in more meaningful ways, which boosts their understanding of the material and their performance."]
+
+[params.footer]
+	enable = true
