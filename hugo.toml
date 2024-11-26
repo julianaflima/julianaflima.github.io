@@ -20,7 +20,7 @@ title = 'Juliana Lima'
 
 [params.hero]
     enable = true
-    avatar = "profile_pic.jpg"
+    avatar = "profile.jpg"
     subtitle = "Juliana Lima"
     subsubtitle = "Assistant Professor"
     subsubsubtitle = "Azim Premji University"
@@ -33,10 +33,10 @@ title = 'Juliana Lima'
 	subtitle = "Selected Published Work, Papers in Progress, and Presentations"
 
 [params.teaching]
-	enable = true
-	title = "Teaching"
-	subtitle = "Past Syllabi, handouts, and sample syllabi"
-  text = ["My classes are designed to be inclusive. My experience teaching in different countries with different cultural backgrounds (Brazil, United States, and India) and as a ESL student in the US gave me a privileged perspective on impacts that differences in cultural, social, and economic backgrounds can have in students outcomes and how to overcome them.",  "Aside from teaching the relevant material, I design my courses to get students to acquire transferable skills, like basic research abilities, written and presentation skills, as well as ability to work in group.", "In my lectures, I take a student-centered approach to teaching, where students have an active role. My most successful strategy to promote student participation and facilitate understanding of the material is, by far, the handouts I devised to structure my lectures over the course of seven years teaching in higher-education.  They encourage students to summarize what is discussed in class and take on an active-listening role. As a result, students engage with the material in more meaningful ways, which boosts their understanding of the material and their performance."]
+    enable = true
+    title = "Teaching"
+    subtitle = "Past Syllabi, handouts, and sample syllabi"
+    text = ["My classes are designed to be inclusive. My experience teaching in different countries with different cultural backgrounds (Brazil, United States, and India) and as a ESL student in the US gave me a privileged perspective on impacts that differences in cultural, social, and economic backgrounds can have in students outcomes and how to overcome them.",  "Aside from teaching the relevant material, I design my courses to get students to acquire transferable skills, like basic research abilities, written and presentation skills, as well as ability to work in group.", "In my lectures, I take a student-centered approach to teaching, where students have an active role. My most successful strategy to promote student participation and facilitate understanding of the material is, by far, the handouts I devised to structure my lectures over the course of seven years teaching in higher-education.  They encourage students to summarize what is discussed in class and take on an active-listening role. As a result, students engage with the material in more meaningful ways, which boosts their understanding of the material and their performance."]
 
 [params.footer]
 	enable = true

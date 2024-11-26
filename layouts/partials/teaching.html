@@ -1,5 +1,5 @@
-<section data-scroll-index="2">
-    <div class="case-studies">
+<section id="teach-section">
+    <div class="research">
         <div class="header">
             <h1 class="title">{{ .Site.Params.teaching.Title }}</h1>
             <h2 class="subtitle">{{ .Site.Params.teaching.Subtitle }}</h2>
@@ -19,8 +19,8 @@
                 {{ range where .Site.Pages "Kind" "page" }}
 
                 <div class="materials-item">
-                    <h3><a href="{{ .RelPermalink }}">{{ .Params.case_short_title }}</a></h3>                
-                    <p>{{ .Params.case_description }}</p>
+                    <h3><a href="{{ .RelPermalink }}">{{ .Params.teach_item_short_title }}</a></h3>                
+                    <p>{{ .Params.teach_item_description }}</p>
                 </div>
                 {{ end }}
             </div>

@@ -1,0 +1,7 @@
+{{ $path := .Get 0 }}
+
+{{ $link := resources.Get $path}}
+
+{{ if $link }}
+{{ $link.Permalink }}
+{{ end }}

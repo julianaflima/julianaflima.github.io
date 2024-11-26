@@ -102,8 +102,11 @@
         {{ end }}
         {{ if isset .Site.Params "lattes" }}
         <a href="{{ .Site.Params.Lattes }}" target="blank">
-        <!--?xml version="1.0" encoding="UTF-8"?-->
-            <img src="{{ .Site.BaseURL }}img/lattes.png" width="16px" height="14px" viewBox="0 0 16 14" alt="social-16px_logo-lattes">
+        {{ $lattes_icon := resources.Get "img/lattes.png"}}
+        {{ if $lattes_icon }}
+            {{ $lattes_icon := $lattes_icon.Resize "16x14"}}
+            <img src="{{ $lattes_icon.Permalink }}" width="16px" height="14px" viewBox="0 0 16 14" alt="social-16px_logo-lattes">
+        {{ end }}
         </a>
         {{ end }}
     </div>

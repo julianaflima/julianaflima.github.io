@@ -1,6 +1,11 @@
 <nav class="main-navigation stuckMenu">
     <a href="{{ .Site.BaseURL }}">
-        <img class="logo" src="{{ .Site.BaseURL }}img/logo.png" alt="Main Page">
+  	
+  	{{ $logo := resources.Get "img/logo.png"}}  
+  	{{ if $logo }}
+  		{{ $logo := $logo.Resize "x100"}}
+	    <img class="logo" src="{{ $logo.Permalink }}" alt="Main Page">
+    {{ end }}
     </a>
     <h5>{{ .Params.nav_heading }}</h5>    
 </nav>

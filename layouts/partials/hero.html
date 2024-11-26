@@ -1,7 +1,14 @@
-<section style="padding-top: 120px;" id="scroll-element" data-scroll-index="0">
+<section style="padding-top: 120px;" id="scroll-element">
     <div class="hero">
         <div class="hero-left">
-            <img class="picture" src="{{ .Site.BaseURL }}img/{{ .Site.Params.Hero.Avatar }}" style="max-width: 50%; border-radius: 50%; ">
+            {{ $prof_img_path := (printf "img/%s" .Site.Params.Hero.Avatar) }}
+            {{ $profile_img := resources.Get $prof_img_path }}
+
+            {{ if $profile_img }}
+                {{ $profile_img := $profile_img.Resize "300x" }}
+                <img class="picture" src="{{ $profile_img.Permalink }}" style="max-width: 50%; border-radius: 50%; ">
+            {{ end }}
+
             <h2 class="subtitle">{{ .Site.Params.Hero.subtitle }}</h2>
             <h2 class="subsubtitle">{{ .Site.Params.Hero.subsubtitle }}</h2>
             <h2 class="subsubsubtitle">{{ .Site.Params.Hero.subsubsubtitle }}</h2>
@@ -65,14 +72,25 @@
                 {{ end }}
                 {{ if isset .Site.Params "lattes" }}
                 <a href="{{ .Site.Params.Lattes }}" target="blank">
-                    <!--?xml version="1.0" encoding="UTF-8"?-->
-                    <img src="{{ .Site.BaseURL }}img/lattes.png" width="16px" height="14px" viewBox="0 0 16 14" alt="social-16px_logo-lattes">
+                    {{ $lattes_icon := resources.Get "img/lattes.png"}}
+                    {{ if $lattes_icon }}
+                        {{ $lattes_icon := $lattes_icon.Resize "x14"}}
+                        <img src="{{ $lattes_icon.Permalink }}" width="16px" height="14px" viewBox="0 0 16 14" alt="social-16px_logo-lattes">
+                    {{ end }}
+ 
                 </a>
                 {{ end }}
             </div>
             {{ if isset .Site.Params.Hero "resume" }}
-            <a href="{{ .Site.BaseURL }}{{ .Site.Params.Hero.Resume }}" target="blank" class="download-resume" onclick="ga('send', {hitType: 'event',eventCategory: 'CTA',eventAction: 'download'});">
-                <img style="position: relative;top: 1.8px;padding-right: 6px;" src="svg/dl-resume.svg">
+                {{ $cv := resources.Get "CVLima.pdf"}}
+                {{ if $cv }}
+                <a href="{{ $cv.Permalink }}" target="blank" class="download-resume" onclick="ga('send', {hitType: 'event',eventCategory: 'CTA',eventAction: 'download'});">
+                {{ end }}
+
+                {{ $dl_icon := resources.Get "svg/dl-resume.svg"}}
+                {{ if $dl_icon }}
+                <img style="position: relative;top: 1.8px;padding-right: 6px;" src="{{ $dl_icon.Permalink }}">
+                {{ end }}
                 Download CV</a>
             {{ end }}
         </div>

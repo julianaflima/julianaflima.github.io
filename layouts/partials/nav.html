@@ -1,16 +1,21 @@
-<nav class="main-navigation stuckMenu">
+<nav class="main-navigation">
     <a href="{{ .Site.BaseURL }}">
-        <img class="logo" src="{{ .Site.BaseURL }}img/logo.png" alt="{{ .Site.Title }}">
+        {{ $logo := resources.Get "img/logo.png"}}
+        {{ if $logo }}
+            {{ $logo := $logo.Resize "x100"}}
+            <img class="logo" src="{{ $logo.Permalink }}" alt="{{ .Site.Title }}">
+        {{ end }}
+        
     </a>
     <div class="sub-navigation">
-        <a href="#" class="main-navigation-link" id="about" data-scroll-goto="0">About</a>
+        <a href="#scroll-element" class="main-navigation-link" id="about" data-scroll-goto="0">About</a>
         
         {{ if .Site.Params.research.enable }}
-        <a href="#" class="main-navigation-link" data-scroll-goto="2">{{ .Site.Params.research.title }}</a>
+        <a class="main-navigation-link" href="#res-section">{{ .Site.Params.research.title }}</a>
         {{ end }}
 
         {{ if .Site.Params.teaching.enable }}
-        <a href="#" class="main-navigation-link" data-scroll-goto="2">{{ .Site.Params.teaching.title }}</a>
+        <a href="#teach-section" class="main-navigation-link">{{ .Site.Params.teaching.title }}</a>
         {{ end }}
     </div>
 </nav>
